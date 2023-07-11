@@ -65,3 +65,10 @@ let getMovie = () => {
 
 searchBtn.addEventListener("click", getMovie);
 window.addEventListener("load", getMovie)
+document.addEventListener("keydown", function(event) {
+    // Verifica si la tecla presionada es la tecla Enter (código 13)
+    if (event.keyCode === 13) {
+      // Ejecuta la misma función getMovie cuando se presiona la tecla Enter
+      getMovie();
+    }
+  });
